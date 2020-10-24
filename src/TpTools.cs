@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Vintagestory.API.Common;
+﻿using Vintagestory.API.Common;
 
 [assembly: ModInfo("tptools",
     Description = "Teleportation Tools",
