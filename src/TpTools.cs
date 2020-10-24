@@ -1,27 +1,20 @@
 ﻿using System.Collections.Generic;
 using Vintagestory.API.Common;
 
-[assembly: ModInfo("fancytools",
-    Description = "Fancy Tools",
+[assembly: ModInfo("tptools",
+    Description = "Teleportation Tools",
     Authors = new[] { "McJty" })]
 
 
-namespace FancyTools
+namespace TpTools
 {
 
-    public class FancyTools : ModSystem {
+    public class TpTools : ModSystem {
 
-        public static string MODID = "fancytools";
-
-        public Dictionary<string, SeedBagInventory> seedBagInventories = new Dictionary<string, SeedBagInventory>();
+        public static string MODID = "tptools";
 
         public override void Start(ICoreAPI api) {
             base.Start(api);
-			// api.RegisterBlockBehaviorClass(TestBehavior.NAME, typeof(TestBehavior));
-            // api.RegisterBlockEntityClass("FancyMold", typeof(BlockEntityFancyMold));
-
-            api.RegisterItemClass(SeedBagItem.NAME, typeof(SeedBagItem));
-            api.RegisterItemClass(SpadeItem.NAME, typeof(SpadeItem));
         }
     }
     

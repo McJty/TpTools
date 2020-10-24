@@ -1,13 +1,13 @@
 {
     "type": "code",
-    "modid": "fancytools",
-    "name": "Fancy Tools",
-    "description" : "Fancy Tools provides all kinds of nice and balanced tools",
+    "modid": "tptools",
+    "name": "Teleportation Tools",
+    "description" : "A simple mod that makes the creative teleporter craftable and allows you to open it's use interface in survival",
     "authors": ["McJty"],
-    "version": "0.2",
+    "version": "0.1",
     "dependencies": { 
       "game": "1.13.3",
       "survival": "1.13.3"
     },
-    "website": "https://github.com/McJty/FancyTools"
+    "website": "https://github.com/McJty/TpTools"
   }
