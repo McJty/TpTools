@@ -4,7 +4,7 @@ using Vintagestory.API.Server;
 using System.Text;
 using Vintagestory.API.Client;
 
-namespace FancyTools
+namespace TpTools
 {
     class VanillaPatches : ModSystem
     {
