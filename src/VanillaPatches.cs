@@ -9,26 +9,13 @@ namespace TpTools
     class VanillaPatches : ModSystem
     {
         public const string patchCode = "McJty.ModSystem.TpToolsVanillaPatches";
-        public const string clientPatchCode = "McJty.ModSystem.TpToolsClientVanillaPatches";
-        public Harmony harmonyServerInstance = new Harmony(patchCode);
-        public Harmony harmonyClientInstance = new Harmony(clientPatchCode);
+        public Harmony harmonyInstance = new Harmony(patchCode);
 
-        public override void StartServerSide(ICoreServerAPI api)
+        public override void Start(ICoreAPI api)
         {
-            harmonyServerInstance.PatchAll();
-            StringBuilder builder = new StringBuilder("Harmony Patched Server Methods: ");
-            foreach (var val in harmonyServerInstance.GetPatchedMethods())
-            {
-                builder.Append(val.Name + ", ");
-            }
-            api.Logger.Notification(builder.ToString());
-        }
-
-        public override void StartClientSide(ICoreClientAPI api)
-        {
-            harmonyClientInstance.PatchAll();
-            StringBuilder builder = new StringBuilder("Harmony Patched Client Methods: ");
-            foreach (var val in harmonyClientInstance.GetPatchedMethods())
+            harmonyInstance.PatchAll();
+            StringBuilder builder = new StringBuilder("Harmony Patched Methods: ");
+            foreach (var val in harmonyInstance.GetPatchedMethods())
             {
                 builder.Append(val.Name + ", ");
             }
@@ -37,8 +24,7 @@ namespace TpTools
 
         public override void Dispose()
         {
-            harmonyServerInstance.UnpatchAll(patchCode);
-            harmonyClientInstance.UnpatchAll(clientPatchCode);
+            harmonyInstance.UnpatchAll(patchCode);
         }
     }
 

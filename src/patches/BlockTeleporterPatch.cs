@@ -13,6 +13,13 @@ namespace TpTools
         {
             if (byPlayer.WorldData.CurrentGameMode == EnumGameMode.Survival)
             {
+                ItemStack heldItem = byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack;
+                if (heldItem != null && heldItem.Item is ItemPadlock)
+                {
+                    world.BlockAccessor.BreakBlock(blockSel.Position, byPlayer);
+                    __result = true;
+                    return false;
+                }
                 TreeAttribute tree = new TreeAttribute();
                 tree.SetInt("posX", blockSel.Position.X);
                 tree.SetInt("posY", blockSel.Position.Y);
@@ -22,7 +29,7 @@ namespace TpTools
                 world.Api.Event.PushEvent("configTeleporter", tree);
                 __result = true;
             }
-            return true;
+            return false;
         }
     }
 

@@ -2,7 +2,7 @@
     "type": "code",
     "modid": "tptools",
     "name": "Teleportation Tools",
-    "description" : "A simple mod that makes the creative teleporter craftable and allows you to open it's use interface in survival",
+    "description" : "A simple mod that makes the creative teleporter craftable and allows you to open it's use interface in survival. It also enables you to pick up the teleporter by rightclicking it with a padlock",
     "authors": ["McJty"],
     "version": "0.1",
     "dependencies": { 
