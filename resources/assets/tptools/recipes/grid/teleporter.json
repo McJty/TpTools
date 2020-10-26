@@ -1,11 +1,11 @@
 {
-	ingredientPattern: "   ,MGM,GPG",
+	ingredientPattern: " M ,MGM,GPG",
 	width: 3,
 	height: 3,
 	ingredients: {
 		"G": { type: "item", code: "game:gear-temporal"},
 		"M": { type: "block", code: "game:metal-parts"},
-		"P": { type: "item", code: "game:metalplate-copper"}
+		"P": { type: "item", code: "game:metalplate-iron"}
 	},
 	output: { type: "block", code: "game:teleporterbase"}
 }
